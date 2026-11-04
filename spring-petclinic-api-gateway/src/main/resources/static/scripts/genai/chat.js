@@ -71,11 +71,20 @@ function saveChatMessages() {
     localStorage.setItem('chatMessages', messages);
 }
 
-// Load chat messages from localStorage
 function loadChatMessages() {
-    const messages = localStorage.getItem('chatMessages');
-    if (messages) {
-        document.getElementById('chatbox-messages').innerHTML = messages;
-        document.getElementById('chatbox-messages').scrollTop = document.getElementById('chatbox-messages').scrollHeight;
+    // Always clear old messages and show welcome from manager
+    localStorage.removeItem('chatMessages');
+    
+    const chatMessages = document.getElementById('chatbox-messages');
+    if (chatMessages) {
+        chatMessages.innerHTML = '';
+        appendMessage('**Manager:** Hello! Welcome to ObsShop. How can I help you today?', 'bot');
     }
 }
+// Make chat minimized by default when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    const chatbox = document.getElementById('chatbox');
+    if (chatbox) {
+        chatbox.classList.add('minimized');
+    }
+});

@@ -1,44 +1,50 @@
 <nav class="navbar navbar-expand-lg navbar-dark" role="navigation">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/"><span></span></a>
+        <a class="navbar-brand" href="/" style="background: none; width: auto; padding-left: 15px; font-size: 22px; font-weight: bold; color: #ffffff;">
+            ObsShop
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navbar">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="main-navbar" style="">
+        <div class="collapse navbar-collapse" id="main-navbar">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
                 <li class="nav-item">
                     <a class="nav-link" ui-sref-active="active" href="/" title="home page">
                         <span class="fa fa-home"></span>
                         <span>Home</span>
                     </a>
                 </li>
-
-                <li>
-                    <a class="nav-link" ui-sref-active="active" ui-sref="owners" title="find owners">
-                        <span class="fa fa-search"></span>
-                        <span>Find owners</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a class="nav-link" ui-sref-active="active" ui-sref="ownerNew" title="register owner">
-                        <span class="fa fa-plus"></span>
-                        <span>Register owner</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a class="nav-link" ui-sref-active="active" ui-sref="vets" title="veterinarians">
+                <li class="nav-item">
+                    <a class="nav-link" ui-sref-active="active" ui-sref="vets" title="products">
                         <span class="fa fa-th-list"></span>
-                        <span>Veterinarians</span>
+                        <span>Products</span>
                     </a>
                 </li>
-
+                <li class="nav-item">
+                    <a class="nav-link" ui-sref-active="active" ui-sref="owners" title="customers">
+                        <span class="fa fa-users"></span>
+                        <span>Customers</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" ui-sref-active="active" ui-sref="ownerNew" title="new customer">
+                        <span class="fa fa-plus"></span>
+                        <span>New Customer</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:9411" target="_blank" title="Zipkin Traces">
+                        <span class="fa fa-search"></span>
+                        <span>Traces</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8761" target="_blank" title="Eureka Dashboard">
+                        <span class="fa fa-server"></span>
+                        <span>Services</span>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
 </nav>
-
-
-
